@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "776806965465",
+    "project_id": "medscape-19680",
+    "storage_bucket": "medscape-19680.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776806965465:android:a43d66eb0c840089bcdec8",
+        "android_client_info": {
+          "package_name": "com.cse.medscape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776806965465-degeo6fdo04i9u51gesphem7gvgak92c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRPNYKcYfMjHCQw5t53qKGHyv5nNTF5Dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776806965465-degeo6fdo04i9u51gesphem7gvgak92c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

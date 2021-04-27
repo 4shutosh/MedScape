@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/above"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:title="Symptoms" />
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:title="Lab Tests" />
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:title="Risk Factors" />
+
+        <item
+            android:id="@+id/nav_mentions"
+            android:title="NLP Symptom Suggestions" />
+
+        <item
+            android:id="@+id/nav_diagnosis"
+            android:title="Diagnosis" />
+
+        <item
+            android:id="@+id/nav_remedies"
+            android:title="Remedies" />
+
+    </group>
+
+    <group
+        android:id="@+id/below"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="Feedback" />
+    </group>
+
+</menu>

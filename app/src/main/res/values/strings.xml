@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MedScape</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="logo">Logo</string>
+    <string name="phone">Phone</string>
+    <string name="forgetPassword">ForgetPassword</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="enterValidPhone">Enter a valid Phone</string>
+    <string name="pleaseEnterOTP">Please Enter OTP</string>
+    <string name="otpSentTo">OTP sent to</string>
+    <string name="EnterTheRecievedOtp">Enter the recieved OTP</string>
+    <string name="verify">Verify</string>
+    <string name="noOtp">Resend OTP</string>
+    <string name="SomeError">Unfortunate Error!</string>
+    <string name="feedBackLink">https://docs.google.com/forms/d/e/1FAIpQLScu9FNugIxScMI_VKTzIY1X41u7SuRQqI9_3ZS-kXsMoiMl4w/viewform</string>
+    <string name="remedy">Remedy</string>
+    <string name="noListFound">No remedy found</string>
+</resources>
