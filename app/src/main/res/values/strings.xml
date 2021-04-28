@@ -19,6 +19,10 @@
     <string name="noOtp">Resend OTP</string>
     <string name="SomeError">Unfortunate Error!</string>
     <string name="feedBackLink">https://docs.google.com/forms/d/e/1FAIpQLScu9FNugIxScMI_VKTzIY1X41u7SuRQqI9_3ZS-kXsMoiMl4w/viewform</string>
+    <string name="indiaPod">https://www.indiaopd.com/</string>
     <string name="remedy">Remedy</string>
     <string name="noListFound">No remedy found</string>
+    <string name="findDoctors">Find Doctors</string>
+    <string name="remind">Remind me</string>
+    <string name="moreHelp">More Help</string>
 </resources>

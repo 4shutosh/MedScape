@@ -26,6 +26,9 @@
             android:id="@+id/nav_remedies"
             android:title="Remedies" />
 
+        <item
+            android:id="@+id/nav_doctor"
+            android:title="Doctors" />
     </group>
 
     <group
@@ -34,6 +37,13 @@
         <item
             android:id="@+id/nav_feedback"
             android:title="Feedback" />
+
+        <item
+            android:id="@+id/nav_indiaPod"
+            android:title="IndiaPod" />
+        <item
+            android:id="@+id/nav_ambulance"
+            android:title="Ambulance" />
     </group>
 
 </menu>
