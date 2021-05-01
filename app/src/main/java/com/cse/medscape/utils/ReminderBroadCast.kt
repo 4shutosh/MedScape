@@ -17,7 +17,7 @@ class ReminderBroadCast : BroadcastReceiver() {
         val channelId = "reminderChannel"
         Log.d("reminder", "onReceive: braodcast")
         if (intent != null) {
-            val title = intent.extras.getString("name")
+            val title = intent.extras?.getString("name")
             val main = Intent(context, MyDiagnosisActivity::class.java)
 
             val m2 = PendingIntent.getActivity(

@@ -8,6 +8,7 @@
     tools:context=".login.LoginFragment">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -54,27 +55,35 @@
 
                 <ImageView
                     android:id="@+id/imageLogo"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="231dp"
+                    android:layout_height="252dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginVertical="@dimen/tenDp"
                     android:contentDescription="@string/logo"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/phone_auth" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/raleway_medium"
                     android:text="@string/welcome"
                     android:textColor="@color/black"
                     android:textSize="35sp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="Please Enter Your Phone No to Login &amp; Register"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/twentyDp"
+                    android:layout_height="84dp"
                     android:orientation="horizontal"
                     android:visibility="visible"
                     android:weightSum="1">
@@ -84,6 +93,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
                         android:layout_weight="0.1"
                         android:paddingEnd="-10dp"
                         app:ccpDialog_allowSearch="false"
@@ -92,24 +102,48 @@
                         app:ccp_autoDetectCountry="true"
                         app:ccp_autoDetectLanguage="true"
                         app:ccp_contentColor="@color/black"
+                        app:ccp_showPhoneCode="false"
                         app:ccp_textSize="18sp"
                         app:layout_constraintBottom_toTopOf="@+id/phoneLayout"
                         app:layout_constraintEnd_toEndOf="@+id/phoneLayout"
                         app:layout_constraintStart_toStartOf="@+id/phoneLayout" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/userPhoneLogin"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.9"
-                        android:backgroundTint="@color/white"
-                        android:hint="@string/phone"
-                        android:fontFamily="@font/oxygen"
-                        android:inputType="phone"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="Phone Number"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/light_blue"
+                        app:boxStrokeColor="@color/light_blue"
+                        app:counterEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/userPhoneLogin"
+                            android:layout_width="273dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/oxygen"
+                            android:inputType="phone"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="383dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="An OTP Will be sent to via SMS to verify your Phone Number"
+                    android:textColor="@color/grey_800"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -120,24 +154,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginVertical="@dimen/tenDp"
-            android:gravity="center"
             android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loginButton"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/dark_blue"
+                android:fontFamily="@font/raleway_bold"
                 android:gravity="center"
                 android:paddingHorizontal="80dp"
-                android:paddingTop="@dimen/fiveDp"
                 android:text="@string/login"
-                android:fontFamily="@font/oxygen"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="0dp"
+                />
         </LinearLayout>
     </RelativeLayout>
 

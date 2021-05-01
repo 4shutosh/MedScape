@@ -2,8 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.Medscape" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#673AB7</item>
-        <item name="colorPrimaryVariant">#512DA8</item>
+
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

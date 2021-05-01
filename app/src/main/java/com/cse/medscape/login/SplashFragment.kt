@@ -33,7 +33,7 @@ class SplashFragment : Fragment(R.layout.splash_fragment) {
             val auth: FirebaseAuth = FirebaseAuth.getInstance()
             if (auth.currentUser == null) {
                 // login
-                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
+                findNavController().navigate(R.id.action_splashFragment_to_termsAndConditions)
             } else {
                 // go to main activity
                 val intent = Intent(context, MyDiagnosisActivity::class.java)

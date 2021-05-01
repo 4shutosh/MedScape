@@ -21,7 +21,19 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/light_blue"
+            android:gravity="center">
 
+            <ImageView
+                android:layout_width="195dp"
+                android:layout_height="193dp"
+                android:layout_gravity="center"
+                android:src="@drawable/verify" />
+
+        </LinearLayout>
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -30,6 +42,7 @@
             android:text="@string/pleaseEnterOTP"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:fontFamily="@font/raleway_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,6 +51,7 @@
             android:id="@+id/phoneText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="3dp"
             android:layout_marginVertical="@dimen/tenDp"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -45,36 +59,46 @@
             tools:layout_editor_absoluteX="128dp"
             tools:layout_editor_absoluteY="226dp" />
 
-        <LinearLayout
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="106dp"
+            android:layout_marginTop="10dp"
+            android:hint="OTP"
+            android:padding="10dp"
+            app:boxStrokeColor="@color/light_blue"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            android:focusedByDefault="false"
+            android:gravity="center"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+
+            app:hintTextColor="@color/light_blue">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/otpEt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginVertical="@dimen/tenDp"
-                android:layout_marginStart="@dimen/tenDp"
-                android:layout_weight="0.9"
+                android:layout_width="233dp"
+                android:layout_height="50dp"
                 android:backgroundTint="@color/white"
-                android:fontFamily="@font/oxygen"
-                android:hint="@string/EnterTheRecievedOtp"
+                android:fontFamily="@font/ralewayregular"
                 android:inputType="number"
                 android:padding="@dimen/tenDp"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:id="@+id/verifyButton"
-                android:layout_marginHorizontal="@dimen/tenDp"
-                android:text="@string/verify" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/verifyButton"
+            android:layout_width="145dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/tenDp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="@string/verify"
+            app:cornerRadius="20dp"/>
 
         <TextView
             android:id="@+id/resendOTP"
@@ -84,11 +108,12 @@
             android:layout_marginVertical="@dimen/tenDp"
             android:clickable="true"
             android:focusable="true"
+            android:fontFamily="@font/raleway_bold"
             android:padding="@dimen/tenDp"
             android:paddingHorizontal="@dimen/twentyDp"
             android:text="@string/noOtp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="12sp"
             tools:layout_editor_absoluteX="128dp"
             tools:layout_editor_absoluteY="226dp" />
     </LinearLayout>

@@ -62,7 +62,7 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
 
     private fun firebaseLogin(phone: String) {
 
-        val text: String = getString(R.string.otpSentTo) + " " + phone;
+        val text: String = getString(R.string.otpSentTo) + " " + phone +" ";
         val ss = SpannableString(text)
         val bcsYellow = ForegroundColorSpan(resources.getColor(R.color.progressColor))
         ss.setSpan(bcsYellow, 11, text.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
