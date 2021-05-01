@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -13,10 +15,10 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cse.medscape.R
-import com.example.mydiagnosis.adapter.ConditionsAdapter
-import com.cse.medscape.viewmodel.DiagnosisResultViewModel
 import com.cse.medscape.model.Condition
+import com.cse.medscape.viewmodel.DiagnosisResultViewModel
 import com.cse.medscape.viewmodel.UserViewModel
+import com.example.mydiagnosis.adapter.ConditionsAdapter
 
 class DiagnosisFragment : Fragment() {
 
@@ -61,11 +63,22 @@ class DiagnosisFragment : Fragment() {
         val diagnoseButton = view.findViewById<Button>(R.id.diagnose_button)
         recyclerView = view.findViewById(R.id.recycler_view_diagnosis)
 
+        val noText = view.findViewById<TextView>(R.id.noResults)
+
+        val progress: ProgressBar = view.findViewById(R.id.progress)
+
         recyclerView.visibility = View.GONE
 
         diagnosisResultViewModel.conditions.observe(this, Observer {
 
-            it?.let { onConditionsFetched(it, recyclerView) }
+            it?.let {
+                if (it.isNotEmpty()) {
+                    onConditionsFetched(it, recyclerView)
+                } else {
+                    progress.visibility = View.GONE
+                    noText.visibility = View.VISIBLE
+                }
+            }
 
         })
 
@@ -79,7 +92,7 @@ class DiagnosisFragment : Fragment() {
 
             diagnoseButton.visibility = View.GONE
             recyclerView.visibility = View.VISIBLE
-
+            progress.visibility = View.VISIBLE
             val userAge = userViewModel.getUserAge(localContext)
             val userGender = userViewModel.getUserGender(localContext)
             diagnosisResultViewModel.getDiagnosis(localContext, userAge, userGender)

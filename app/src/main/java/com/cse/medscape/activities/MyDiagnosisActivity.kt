@@ -166,9 +166,9 @@ class MyDiagnosisActivity : AppCompatActivity() {
             R.id.nav_remedies -> fragmentClass = RemedyFragment::class.java
             R.id.nav_doctor -> fragmentClass = DoctorFragment::class.java
             R.id.nav_ambulance -> {
-                fragmentClass =  DoctorFragment::class.java
+                fragmentClass = DoctorFragment::class.java
                 val intent =
-                    Intent(Intent.ACTION_CALL, Uri.parse("tel:" +"102"))
+                    Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "102"))
                 startActivity(intent)
             }
             R.id.nav_indiaPod -> {
@@ -202,17 +202,8 @@ class MyDiagnosisActivity : AppCompatActivity() {
 
         if (fragment != null) {
             // check back stack here
-            if (fragmentClass == RemedyFragment::class.java) {
-                fragmentManager.beginTransaction().replace(R.id.flContent, fragment)
-                    .addToBackStack("remedy")
-                    .commit()
-            } else if (fragmentClass == WebViewFragment::class.java) {
-                fragmentManager.beginTransaction().replace(R.id.flContent, fragment)
-                    .addToBackStack("web").commit()
-            } else {
-                fragmentManager.beginTransaction().replace(R.id.flContent, fragment)
-                    .addToBackStack("home").commit()
-            }
+            fragmentManager.beginTransaction().replace(R.id.flContent, fragment)
+                .addToBackStack("Name").commit()
             Log.d("temp", "selectDrawerItem: " + fragmentManager.backStackEntryCount)
         }
 
@@ -250,11 +241,15 @@ class MyDiagnosisActivity : AppCompatActivity() {
 
     // fix this
     override fun onBackPressed() {
+        mDrawer?.closeDrawers()
         if (supportFragmentManager.backStackEntryCount > 0) {
-            supportFragmentManager.popBackStack()
+            supportFragmentManager.popBackStackImmediate()
+            if (supportFragmentManager.backStackEntryCount == 0) {
+                linearLayout.visibility = View.VISIBLE
+                toolbar?.setTitle(R.string.app_name)
+            }
         } else {
             super.onBackPressed()
-
         }
     }
 

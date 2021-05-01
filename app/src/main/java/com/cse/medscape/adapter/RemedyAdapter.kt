@@ -102,7 +102,7 @@ class RemedyVieHolder(
                     activity.supportFragmentManager.beginTransaction().replace(
                         R.id.flContent,
                         fragment
-                    )
+                    ).addToBackStack("link")
                         .commit()
                 }
             })

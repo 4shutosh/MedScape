@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
+        <Button
+            android:id="@+id/diagnose_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:clickable="true"
             android:text="Diagnose"
-            android:visibility="visible"
-            android:id="@+id/diagnose_button" android:textColorLink="#00632020" android:textSize="18sp"/>
+            android:textColorLink="#00632020"
+            android:textSize="18sp"
+            android:visibility="visible" />
 
-    <androidx.recyclerview.widget.RecyclerView
+        <TextView
+            android:id="@+id/noResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Resuls! Please recheck your selections"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_diagnosis"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
-</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
