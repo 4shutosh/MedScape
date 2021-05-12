@@ -2,16 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
+    android:background="@color/dark_blue"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:visibility="visible">
+
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="124dp"
+        android:src="@drawable/medsacpe_logo"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Header"
+        android:text="MEDSCAPE"
+        android:fontFamily="@font/raleway_bold"
+        android:textSize="25dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white" />
 

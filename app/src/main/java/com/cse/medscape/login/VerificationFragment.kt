@@ -19,7 +19,9 @@ import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
 import java.util.concurrent.TimeUnit
 
+
 class VerificationFragment : Fragment(R.layout.fragment_verification) {
+
 
     private lateinit var binding: FragmentVerificationBinding
 

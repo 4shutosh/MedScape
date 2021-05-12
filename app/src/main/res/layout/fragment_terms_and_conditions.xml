@@ -4,37 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_height="174dp"
+        android:background="@color/light_blue"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="97dp"
+            android:layout_height="102dp"
             android:layout_gravity="center"
-            android:src="@drawable/terms"
-            />
+            android:src="@drawable/terms" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Our Terms &amp; Conditions"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
-        android:layout_height="387dp"
-        android:fillViewport="true"
-        android:scrollbars="vertical"
+        android:layout_height="396dp"
         android:layout_marginTop="10dp"
-        >
+        android:fillViewport="true"
+        android:scrollbars="vertical">
 
         <TextView
             android:id="@+id/TEXT_STATUS_ID"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:padding="10dp"
-            android:textColor="@color/black"
-            android:text="@string/terms" />
+            android:fontFamily="@font/ralewayregular"
+            android:text="@string/terms"
+            android:textColor="@color/black" />
     </ScrollView>
 
 
@@ -57,10 +68,11 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonProceed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="130dp"
+            android:layout_height="55dp"
             android:text="Proceed"
-            android:backgroundTint="@color/black"/>
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/dark_blue"/>
 
     </LinearLayout>
 

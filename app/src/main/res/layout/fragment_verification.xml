@@ -74,10 +74,9 @@
             android:gravity="center"
             app:hintEnabled="true"
             app:hintAnimationEnabled="true"
-
             app:hintTextColor="@color/light_blue">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/otpEt"
                 android:layout_width="233dp"
                 android:layout_height="50dp"
@@ -93,7 +92,7 @@
         <Button
             android:id="@+id/verifyButton"
             android:layout_width="145dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_marginHorizontal="@dimen/tenDp"
             android:backgroundTint="@color/dark_blue"

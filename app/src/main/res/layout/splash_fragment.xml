@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login.SplashFragment"
-    android:background="@drawable/back">
+    android:background="@drawable/back"
+    >
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="243dp"
+        android:layout_height="185dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginVertical="@dimen/tenDp"
         android:contentDescription="@string/logo"
-        android:src="@drawable/logo"
+        android:src="@drawable/medsacpe_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
