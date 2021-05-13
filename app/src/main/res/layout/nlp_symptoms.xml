@@ -50,8 +50,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="259dp"
-        android:layout_height="59dp"
+        android:layout_width="327dp"
+        android:layout_height="101dp"
         android:layout_gravity="center"
         android:hint="Describe your problem here"
         app:boxStrokeColor="@color/light_blue"
@@ -62,7 +62,7 @@
         <EditText
             android:id="@+id/userInput"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:maxEms="10"
             android:visibility="visible" />
