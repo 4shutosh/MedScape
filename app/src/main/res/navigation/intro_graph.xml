@@ -9,14 +9,11 @@
         android:id="@+id/splashFragment"
         android:name="com.cse.medscape.login.SplashFragment"
         android:label="SplashFragment">
-
         <action
-            android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/intro_graph"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_splashFragment_to_termsAndConditions"
+            app:destination="@id/termsAndConditions" />
     </fragment>
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.cse.medscape.login.LoginFragment"
@@ -33,5 +30,13 @@
         <argument
             android:name="phone"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndConditions"
+        android:name="com.cse.medscape.fragment.TermsAndConditions"
+        android:label="TermsAndConditions" >
+        <action
+            android:id="@+id/action_termsAndConditions_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

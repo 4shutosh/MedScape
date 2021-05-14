@@ -81,7 +81,7 @@ class MyDiagnosisActivity : AppCompatActivity() {
 
         if (userViewModel.getUserName(this) == "") {
 
-            userNameTextView.visibility = View.GONE
+
 
             submitButton.setOnClickListener {
 

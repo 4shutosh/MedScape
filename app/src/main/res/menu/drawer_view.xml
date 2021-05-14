@@ -14,13 +14,15 @@
             android:id="@+id/nav_third_fragment"
             android:title="Risk Factors" />
 
-        <item
-            android:id="@+id/nav_mentions"
-            android:title="NLP Symptom Suggestions" />
 
         <item
             android:id="@+id/nav_diagnosis"
             android:title="Diagnosis" />
+
+        <item
+            android:id="@+id/nav_mentions"
+            android:title="NLP Symptom Suggestions" />
+
 
         <item
             android:id="@+id/nav_remedies"

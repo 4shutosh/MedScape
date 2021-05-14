@@ -22,7 +22,7 @@ class WebViewFragment : Fragment(R.layout.fragment_web) {
         val bundle = arguments
         if (bundle != null) {
             val link = bundle.getString("link")?.toString()
-            link.let {
+            link?.let {
                 binding.progress.visibility = View.VISIBLE
                 binding.webView.apply {
                     webViewClient = WebViewClient()

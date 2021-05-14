@@ -7,13 +7,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.cse.medscape"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -24,6 +24,10 @@ android {
             }
         })
     }
+    buildFeatures{
+        viewBinding = true
+    }
+
 
     buildTypes {
         release {
@@ -38,9 +42,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    viewBinding{
-        enabled = true
-    }
+
 }
 
 dependencies {

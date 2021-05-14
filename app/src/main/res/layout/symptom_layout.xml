@@ -8,6 +8,7 @@
     android:orientation="horizontal"
     android:padding="12dp">
 
+
     <ImageView
         android:id="@+id/severity_icon"
         android:layout_width="60dp"
