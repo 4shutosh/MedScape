@@ -41,6 +41,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 // proceed firebase login here
                 loginBinding.userPhoneLogin.error = getString(R.string.enterValidPhone)
             } else {
+                loginBinding.userPhoneLogin.error = ""
                 firebaseLogin(string)
             }
         }
