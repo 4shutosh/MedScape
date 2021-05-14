@@ -11,7 +11,9 @@
         android:label="SplashFragment">
         <action
             android:id="@+id/action_splashFragment_to_termsAndConditions"
-            app:destination="@id/termsAndConditions" />
+            app:destination="@id/termsAndConditions"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
 
     <fragment
@@ -21,7 +23,9 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_verificationFragment"
-            app:destination="@id/verificationFragment" />
+            app:destination="@id/verificationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/verificationFragment"
@@ -34,9 +38,11 @@
     <fragment
         android:id="@+id/termsAndConditions"
         android:name="com.cse.medscape.fragment.TermsAndConditions"
-        android:label="TermsAndConditions" >
+        android:label="TermsAndConditions">
         <action
             android:id="@+id/action_termsAndConditions_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
 </navigation>

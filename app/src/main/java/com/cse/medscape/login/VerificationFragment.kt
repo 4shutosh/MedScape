@@ -66,7 +66,7 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
 
         val text: String = getString(R.string.otpSentTo) + " " + phone +" ";
         val ss = SpannableString(text)
-        val bcsYellow = ForegroundColorSpan(resources.getColor(R.color.progressColor))
+        val bcsYellow = ForegroundColorSpan(resources.getColor(R.color.dark_blue))
         ss.setSpan(bcsYellow, 11, text.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         binding.phoneText.text = ss
         sendOtp(phone)

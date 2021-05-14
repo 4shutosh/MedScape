@@ -8,9 +8,9 @@
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progress"
         android:layout_width="match_parent"
-        android:visibility="gone"
-        android:indeterminate="true"
         android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,6 +21,7 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -34,15 +35,16 @@
                 android:src="@drawable/verify" />
 
         </LinearLayout>
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/tenDp"
+            android:fontFamily="@font/raleway_bold"
             android:text="@string/pleaseEnterOTP"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:fontFamily="@font/raleway_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -51,8 +53,8 @@
             android:id="@+id/phoneText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
             android:layout_marginVertical="@dimen/tenDp"
+            android:padding="3dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="italic"
@@ -62,24 +64,21 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="106dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="OTP"
             android:padding="10dp"
             app:boxStrokeColor="@color/light_blue"
             app:counterEnabled="true"
             app:counterMaxLength="6"
-            android:focusedByDefault="false"
-            android:gravity="center"
-            app:hintEnabled="true"
-            app:hintAnimationEnabled="true"
             app:hintTextColor="@color/light_blue">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/otpEt"
                 android:layout_width="233dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/ralewayregular"
                 android:inputType="number"
@@ -97,7 +96,7 @@
             android:layout_marginHorizontal="@dimen/tenDp"
             android:backgroundTint="@color/dark_blue"
             android:text="@string/verify"
-            app:cornerRadius="20dp"/>
+            app:cornerRadius="20dp" />
 
         <TextView
             android:id="@+id/resendOTP"

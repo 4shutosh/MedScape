@@ -7,7 +7,7 @@ class LoginViewModel : ViewModel() {
     private val TAG = "LoginViewModel"
 
     fun validatePhone(phone: String): Boolean {
-        Log.d(TAG, "validatePhone: " + phone)
+        Log.d(TAG, "validatePhone: $phone")
         return phone.length < 10
     }
 

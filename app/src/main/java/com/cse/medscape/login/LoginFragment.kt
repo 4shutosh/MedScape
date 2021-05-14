@@ -37,7 +37,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             val string = loginBinding.userPhoneLogin.text.toString()
             val bool = viewModel.validatePhone(string)
 
-            if (bool) {
+            if (!bool) {
                 // proceed firebase login here
                 loginBinding.userPhoneLogin.error = getString(R.string.enterValidPhone)
             } else {

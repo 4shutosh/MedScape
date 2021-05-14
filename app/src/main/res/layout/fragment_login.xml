@@ -111,20 +111,20 @@
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:hint="Phone Number"
-                        app:counterMaxLength="10"
-                        app:hintTextColor="@color/light_blue"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="0.9"
+                        android:hint="@string/phone_number"
+                        android:padding="@dimen/tenDp"
                         app:boxStrokeColor="@color/light_blue"
-                        app:counterEnabled="true">
+                        app:counterEnabled="true"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/light_blue">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/userPhoneLogin"
                             android:layout_width="273dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.9"
                             android:backgroundTint="@color/white"
                             android:fontFamily="@font/oxygen"
                             android:inputType="phone"
@@ -167,8 +167,7 @@
                 android:text="@string/login"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:cornerRadius="0dp"
-                />
+                app:cornerRadius="0dp" />
         </LinearLayout>
     </RelativeLayout>
 

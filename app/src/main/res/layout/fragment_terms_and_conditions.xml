@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/topLl"
         android:layout_width="match_parent"
-        android:layout_height="174dp"
+        android:layout_height="wrap_content"
         android:background="@color/light_blue"
+        android:paddingVertical="@dimen/tenDp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -33,7 +33,9 @@
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
-        android:layout_height="396dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLl"
+        android:layout_above="@id/bottomLL"
         android:layout_marginTop="10dp"
         android:fillViewport="true"
         android:scrollbars="vertical">
@@ -41,17 +43,18 @@
         <TextView
             android:id="@+id/TEXT_STATUS_ID"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:padding="10dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/ralewayregular"
+            android:padding="10dp"
             android:text="@string/terms"
             android:textColor="@color/black" />
     </ScrollView>
 
-
     <LinearLayout
+        android:id="@+id/bottomLL"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="134dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp">
@@ -60,20 +63,20 @@
             android:id="@+id/checkboxAccept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="Accept Terms &amp; Conditions"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            app:useMaterialThemeColors="true"
             app:buttonTint="@color/black"
-            android:hint="Accept Terms &amp; Conditions" />
+            app:useMaterialThemeColors="true" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonProceed"
             android:layout_width="130dp"
             android:layout_height="55dp"
+            android:backgroundTint="@color/dark_blue"
             android:text="Proceed"
-            app:cornerRadius="20dp"
-            android:backgroundTint="@color/dark_blue"/>
+            app:cornerRadius="20dp" />
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
