@@ -27,6 +27,7 @@ import com.cse.medscape.fragment.*
 import com.cse.medscape.viewmodel.UserViewModel
 import com.facebook.stetho.Stetho
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.textfield.TextInputLayout
 
 class MyDiagnosisActivity : AppCompatActivity() {
 
@@ -79,6 +80,11 @@ class MyDiagnosisActivity : AppCompatActivity() {
         val submitButton = findViewById<Button>(R.id.submitUserInfoBtn)
 
 
+        val userLayout = findViewById<TextInputLayout>(R.id.userNameLayout)
+        val ageLayout = findViewById<TextInputLayout>(R.id.ageLayout)
+        val genderLayout = findViewById<TextInputLayout>(R.id.genderLayout)
+
+
         if (userViewModel.getUserName(this) == "") {
 
 
@@ -98,6 +104,10 @@ class MyDiagnosisActivity : AppCompatActivity() {
                 userAgeInput.visibility = View.GONE
                 userGenderInput.visibility = View.GONE
 
+                userLayout.visibility = View.GONE
+                ageLayout.visibility = View.GONE
+                genderLayout.visibility = View.GONE
+
                 userNameTextView.visibility = View.VISIBLE
                 userNameTextView.text = "Welcome ${userViewModel.getUserName(this)}"
 
@@ -112,6 +122,10 @@ class MyDiagnosisActivity : AppCompatActivity() {
             userAgeInput.visibility = View.GONE
             userGenderInput.visibility = View.GONE
             submitButton.visibility = View.GONE
+
+            userLayout.visibility = View.GONE
+            ageLayout.visibility = View.GONE
+            genderLayout.visibility = View.GONE
         }
     }
 

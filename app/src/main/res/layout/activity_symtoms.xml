@@ -124,6 +124,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
+                    android:id="@+id/userNameLayout"
                     android:hint="User Name"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
@@ -146,6 +147,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:hint="Age"
+                    android:id="@+id/ageLayout"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
                     app:boxStrokeColor="@color/black"
@@ -169,7 +171,7 @@
                     android:layout_marginTop="5dp"
                     android:hint="Gender"
                     android:paddingStart="5dp"
-
+                    android:id="@+id/genderLayout"
                     android:paddingEnd="5dp"
                     app:boxStrokeColor="@color/black"
                     app:hintTextColor="@color/black">
@@ -178,7 +180,6 @@
                         android:id="@+id/userGenderInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:inputType="text"
                         android:padding="10dp"
                         android:textSize="20sp" />
