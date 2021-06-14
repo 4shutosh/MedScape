@@ -42,7 +42,7 @@
 
         <item
             android:id="@+id/nav_indiaPod"
-            android:title="IndiaPod" />
+            android:title="India OPD" />
         <item
             android:id="@+id/nav_ambulance"
             android:title="Ambulance" />

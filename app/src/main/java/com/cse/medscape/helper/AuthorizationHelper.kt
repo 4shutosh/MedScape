@@ -14,8 +14,6 @@ class AuthorizationHelper : Interceptor {
         request = request.newBuilder()
             .addHeader("Content-Type", "application/json")
             .addHeader("Accept", "application/json")
-            .addHeader("App-Id", "4ad985fc")
-            .addHeader("App-Key", "db6aa1b5f942f03379396eaeb8b6b591")
             .build()
         return chain.proceed(request)
 
