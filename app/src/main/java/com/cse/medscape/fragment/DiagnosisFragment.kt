@@ -69,15 +69,15 @@ class DiagnosisFragment : Fragment() {
 
         recyclerView.visibility = View.GONE
 
-        diagnosisResultViewModel.conditions.observe(this, Observer {
+        diagnosisResultViewModel.conditions.observe(viewLifecycleOwner, Observer {
 
             it?.let {
                 if (it.isNotEmpty()) {
                     onConditionsFetched(it, recyclerView)
                 } else {
-                    progress.visibility = View.GONE
                     noText.visibility = View.VISIBLE
                 }
+                progress.visibility = View.GONE
             }
 
         })

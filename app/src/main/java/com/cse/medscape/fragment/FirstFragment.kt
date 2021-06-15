@@ -2,6 +2,7 @@ package com.cse.medscape.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,18 +16,23 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cse.medscape.R
 import com.cse.medscape.adapter.SymptomsAdapter
-import com.cse.medscape.viewmodel.SymptomViewModel
 import com.cse.medscape.model.Symptom
+import com.cse.medscape.viewmodel.SymptomViewModel
+import com.google.android.material.progressindicator.LinearProgressIndicator
 
 
 class FirstFragment() : Fragment() {
 
-    private lateinit var symptomViewModel : SymptomViewModel
+    private lateinit var symptomViewModel: SymptomViewModel
     private lateinit var recyclerView: RecyclerView
+    private lateinit var progress: LinearProgressIndicator
 
-    private fun onSymptomsFetched(symptoms : List<Symptom>, recyclerView: RecyclerView) {
+    private fun onSymptomsFetched(symptoms: List<Symptom>, recyclerView: RecyclerView) {
 
-        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, LinearLayoutManager(requireContext()).orientation)
+        val dividerItemDecoration = DividerItemDecoration(
+            recyclerView.context,
+            LinearLayoutManager(requireContext()).orientation
+        )
         dividerItemDecoration.setDrawable(
             ContextCompat.getDrawable(
                 requireContext(),
@@ -36,9 +42,11 @@ class FirstFragment() : Fragment() {
 
         recyclerView.addItemDecoration(dividerItemDecoration)
 
-        recyclerView.adapter = SymptomsAdapter(requireContext(), symptoms, this.layoutInflater, symptomViewModel)
+        recyclerView.adapter =
+            SymptomsAdapter(requireContext(), symptoms, this.layoutInflater, symptomViewModel)
 
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        if (symptoms.isNotEmpty())
+            progress.visibility = View.GONE
     }
 
     override fun onCreate(@Nullable savedInstanceState: Bundle?) {
@@ -48,7 +56,11 @@ class FirstFragment() : Fragment() {
 
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         return inflater.inflate(R.layout.first_fragment, container, false)
 
@@ -57,16 +69,17 @@ class FirstFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         recyclerView = view.findViewById(R.id.recycler_view)
+        progress = view.findViewById(R.id.progress)
+        progress.visibility = View.VISIBLE
+        symptomViewModel.symptomsFound.observe(viewLifecycleOwner, Observer {
 
-        symptomViewModel.symptomsFound.observe(this, Observer {
-
-            it?.let{ onSymptomsFetched(it, recyclerView) }
+            it?.let { onSymptomsFetched(it, recyclerView) }
 
         })
 
-        val localContext : Context? = activity
+        val localContext: Context? = activity
 
-        if(localContext == null) {
+        if (localContext == null) {
             return
         }
 

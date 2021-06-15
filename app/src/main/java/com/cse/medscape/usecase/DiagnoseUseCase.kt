@@ -1,6 +1,7 @@
 package com.cse.medscape.usecase
 
 import android.content.Context
+import android.util.Log
 import com.cse.medscape.database.DiagnosisRoomDatabase
 import com.cse.medscape.model.Condition
 import com.cse.medscape.retrofit.RetrofitClient
@@ -38,6 +39,7 @@ class DiagnoseUseCase(val context: Context, val userAge: Int?, val userGender: S
                 evidencesJsonObject.add(jsonObject)
 
             }
+            Log.d("TAG", "evidence: $evidencesJsonObject")
 
         }
 

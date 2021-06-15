@@ -52,7 +52,7 @@ class FetchSymptomsUseCase(val context: Context) {
             Toast.makeText(context, "Error fetching Symptoms", Toast.LENGTH_LONG).show()
         }
 
-
+//
         val editor = sharedPreferences.edit()
         editor.putBoolean("fetchedSymptoms", true).apply()
 
